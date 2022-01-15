@@ -1,4 +1,6 @@
 extension KeychainClient {
+  /// A KeychainClient implementation that does nothing when called.
+  /// Can be used on Xcode Previews.
   public static let noop = KeychainClient(
     getString: { _ in nil },
     getData: { _ in nil },
@@ -14,6 +16,8 @@ extension KeychainClient {
   import XCTestDynamicOverlay
 
   extension KeychainClient {
+    /// A KeychainClient implementation that fails when called.
+    /// Used for testing purposes and available only in DEBUG builds.
     public static let failing = KeychainClient(
       getString: { key in
         XCTFail("\(Self.self).getString(\(key)) is unimplemented")
