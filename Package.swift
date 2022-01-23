@@ -18,14 +18,14 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/kishikawakatsumi/KeychainAccess", from: "4.2.2"),
-    .package(url: "https://github.com/pointfreeco/swift-composable-architecture", from: "0.33.0"),
+    .package(url: "https://github.com/pointfreeco/xctest-dynamic-overlay", from: "0.2.0"),
   ],
   targets: [
     .target(
       name: "ComposableKeychain",
       dependencies: [
         "KeychainAccess",
-        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
+        .product(name: "XCTestDynamicOverlay", package: "xctest-dynamic-overlay"),
       ]),
     .testTarget(
       name: "ComposableKeychainTests",
