@@ -32,7 +32,7 @@ public struct KeychainClient {
   /// Example:
   /// ```swift
   /// extension KeychainClient.Key {
-  ///   static let currentSession = Key("current_session")
+  ///   static let currentSession = Self("current_session")
   /// }
   ///
   /// let keychain = KeychainClient.live(...)
