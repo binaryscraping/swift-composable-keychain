@@ -1,3 +1,3 @@
-# ComposableKeychain
+# Swift Composable Keychain
 
-A description of this package.
+A composable Keychain wrapper around [kishikawakatsumi/KeychainAccess](https://github.com/kishikawakatsumi/KeychainAccess).
